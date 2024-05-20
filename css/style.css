@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --selectionBgColor: #fec260;
+    --mainBgColor: rgb(247, 236, 222);
+    --mainTextColor: #352e28;
+    --mainFocusColor: #d99c39;
+    --whiteColor: #FFF;
+    --BlackColor: #000;
+    --deleteBtnColor: #eb1d36;
+    --deleteBtnHover: #ba081d;
+    --addBtnColor: #d1512d;
+    --addBtnHover: #bb4120;
+    --visitBtnColor: #9eb23b;
+    --visitBtnHover: #8a9e23;
+    --invalidIconColor: #dc3545;
+    --validIconColor: #198754;
+    --sweetAlertColor: #f27474;
+    --sweetAlertBS: rgba(242, 116, 116, 0.4);
+}
+
+body {
+    background-color: var(--mainBgColor);
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+::-moz-selection {
+    background-color: var(--selectionBgColor);
+}
+
+::selection {
+    background-color: var(--selectionBgColor);
+    ;
+}
+p{
+    margin-bottom: 0;
+}
+.bookmark-body {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: var(--mainTextColor);
+    padding: 0 10px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Pacifico", cursive;
+    color: var(--mainTextColor);
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: var(--selectionBgColor);
+    -webkit-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 50%;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: "Righteous", cursive;
+    background-image: -webkit-gradient(linear, left top, right top, from(#3ca55c), to(#b5ac49));
+    background-image: -o-linear-gradient(left, #3ca55c, #b5ac49);
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: var(--whiteColor);
+    border-color: var(--mainFocusColor);
+    -webkit-box-shadow: 0 0 0 0.25rem #fec26055;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.btn-add:active,
+.btn-visit:active,
+.btn-delete:active {
+    background-color: transparent;
+    border-color: var(--mainTextColor);
+}
+
+.btn-add,
+.btn-visit,
+.btn-delete,
+.btn-add:hover,
+.btn-visit:hover,
+.btn-delete:hover {
+    color: var(--whiteColor);
+}
+
+.btn-add {
+    background-color:var(--addBtnColor);
+    border-color: var(--addBtnColor);
+}
+
+.btn-add:hover,.btn-update:hover{
+   background-color:var(--addBtnHover);
+    border-color: var(--addBtnHover);
+}
+
+.btn-visit {
+    background-color:var(--visitBtnColor);
+    border-color: var(--visitBtnColor);
+}
+
+.btn-visit:hover {
+    background-color:var(--visitBtnHover);
+    border-color: var(--visitBtnHover);
+}
+
+.btn-delete {
+    background-color: var(--deleteBtnColor);
+    border-color: var(--deleteBtnColor);
+}
+
+.btn-delete:hover {
+    background-color: var(--deleteBtnHover);
+    border-color: var(--deleteBtnHover);
+}
+
+.invalid {
+    border-color: var(--invalidIconColor);
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' stroke='%23dc3545' stroke-width='2'%3E%3C/path%3E%3Cpath d='M12 8L12 13' stroke='%23dc3545' stroke-width='2' stroke-linecap='round'%3E%3C/path%3E%3Cpath d='M12 16V15.9888' stroke='%23dc3545' stroke-width='2' stroke-linecap='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.valid {
+    border-color:var(--validIconColor);
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="%23198754"%3E%3Cg id="SVGRepo_bgCarrier" stroke-width="0"%3E%3C/g%3E%3Cg id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"%3E%3C/g%3E%3Cg id="SVGRepo_iconCarrier"%3E%3Cpath d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="%23198754" stroke-width="2"%3E%3C/path%3E%3Cpath d="M9 12L10.6828 13.6828V13.6828C10.858 13.858 11.142 13.858 11.3172 13.6828V13.6828L15 10" stroke="%23198754" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+.name-validaiton{
+    display: none;
+}
+.name-unique-validation{
+    display: none;
+}
+.url-validation{
+    display: none;
+}
+div:where(.swal2-container) .swal2-html-container {
+    text-align: left;
+    padding: 0 0 0 35px;
+}
+
+.sweetAlert-rules span {
+    color: var(--sweetAlertColor);
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: var(--sweetAlertColor);
+    padding: 0.525em 1.6em;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus {
+    box-shadow: 0 0 0 3px var(--sweetAlertBS);
+}
+
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .table-style {
+        overflow-x: auto;
+    }
+}
